@@ -64,16 +64,43 @@ I type alias sono più flessibili, permettono di definire unioni, intersezioni e
 In molti casi possono essere usati in modo intercambiabile, ma le interface offrono alcune funzionalità in più per l'estensione */
 
 // 13) Definisci un'interfaccia in TypeScript per un oggetto dotato di proprietà "firstname", "lastname", e "age".
+interface Persona {
+  firstname: string;
+  lastname: string;
+  age: number;
+}
 
 // 14) Crea un'interfaccia per un utente con email obbligatoria e telefono opzionale.
+interface Utente {
+  email: string;
+  telefono?: string;
+}
 
 // 15) Crea un array tipizzato di oggetti "Studente" con nome e voto.
+interface Studente {
+  nome: string;
+  voto: number;
+}
+
+const studenti: Studente[] = [
+  { nome: "Mario", voto: 8 },
+  { nome: "Luigi", voto: 9 },
+];
 
 // 16) Crea un'interfaccia base "Veicolo" e estendila per creare "Auto".
+interface Veicolo {
+  marca: string;
+  modello: string;
+  anno: number;
+}
 
 // 17) Crea un oggetto che implementi l'interfaccia Auto.
 
 // 18) Cosa sono i Generics in TypeScript?
+/* I generics consentono di creare componenti riutilizzabili e tipizzati,
+che possono lavorare con diversi tipi mantenendo la sicurezza dei tipi.
+Permettono di definire funzioni, classi o interfacce che operano su un tipo generico,
+specificato al momento dell'utilizzo */
 
 // 19) È possibile avere più tipi generici in un'interfaccia?
 
